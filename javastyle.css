@@ -1,0 +1,107 @@
+.background {
+    background-color:rgb(68, 120, 233) ;
+}
+
+.center{
+    position:fixed;
+    top:40%;
+    left:45%;
+    
+    
+}
+.buttonBackground{
+    
+    position: relative;
+    
+    width: 200px;
+    height:200px;
+    border-radius: 100%;
+    border-width:10px;
+    background-color: grey;
+    position: relative; 
+    z-index: -1;
+    
+    
+    
+    box-shadow: 
+        5px 5px black,
+        6px 6px 8px rgb(36, 29, 29),
+        10px 20px 15px rgb(159, 159, 159) inset;
+        z-index:-1;
+}
+.buttonUnpushedSprite {
+   /* display: none; /* change this later to show display*/
+    position:absolute;
+    width: 135px;
+    height:135px;
+    border-radius: 100%;
+    color:red;
+    background-color: red;
+    box-shadow: 15px 10px 5px black,
+     20px 15px 18px rgb(50, 43, 43),
+     20px 45px 26px rgb(237, 152, 152)inset; 
+    top:30px;
+    
+    left:30px;
+    z-index: 1;
+    
+    
+    
+
+    
+}
+
+.counter{
+    position:absolute;
+    width: 120px;
+    height:60px;
+    color:black;
+    background-color: black;
+    top:110%;
+    left:50px;
+    
+
+}
+.myHeader{
+    text-align:center;
+    font-style: Helvetica, normal;
+}
+.counter , div{
+    
+    color:white;
+    text-align: center;
+    font-size:30px;
+    
+    
+}
+.buttonUnpushedSprite:hover {
+    cursor:pointer;
+}
+.buttonPushed.buttonUnpushedSprite{
+    transition: all;
+    transition: delay 10px;
+}
+.buttonPushed {
+    display: none;
+    position:absolute;
+    width: 135px;
+    height:135px;
+    border-radius: 100%;
+    color:red;
+    background-color: red;          
+           /*change this later back to 400px*/
+    box-shadow:  
+        10px 10px 5px black inset,
+        20px 20px 5px rgb(40, 2, 2) inset,
+        -50px -50px 60px rgb(251, 125, 125) inset;
+        top:30px;
+    
+        left:30px;
+        z-index: 0;
+        
+}        
+
+/*.center{
+    margin-top: auto;
+    margin-bottom: auto;
+}
