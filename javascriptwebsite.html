@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <script src="javascriptweb.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="name: this is my javascript website">
+        <link rel="stylesheet" href="javastyle.css">
+        <title>The Button</title>
+    </head>
+    <body class="background"></body>
+    <myHeader class="myHeader">
+        <h1>Welcome to the END OF TIKTOK.</h1>
+        <h2>forget scrolling, heres pressing!</h2>
+    </myHeader>    
+    <article>
+        <body class="background">
+            <div class="center">
+                    
+                    <div id="buttonBackground" class="buttonBackground">
+                        <div id="buttonUnpushedSprite" class="buttonUnpushedSprite"> </div>
+                        <div id="buttonPushed" class="buttonPushed"></div>
+                        <div id ="square" class="counter">0</div> 
+                    </div>
+                    
+            </div>
+        </article>
+        <script>
+            const button = document.getElementById("buttonUnpushedSprite");
+            const buttonPushed = document.getElementById("buttonPushed");
+            const background = document.querySelector(".background");
+            let count= 0;
+            const randomColor = '#' + Math.floor(Math.random()*123456).toString(16);
+            background.style.backgroundColor = randomColor;
+       
+            function releaseButton(){
+            button.style.display = "block";
+            buttonPushed.style.display = "none";
+        
+            }
+            function pushButton(){
+                button.style.display = "none";
+                buttonPushed.style.display = "block";
+                const randomColor = '#' + Math.floor(Math.random()*6767676).toString(16);
+                background.style.backgroundColor = randomColor;
+                count += 1;
+                const dispNum = document.getElementById("square");
+                dispNum.innerHTML = count;
+            }
+            button.addEventListener("mousedown", pushButton);
+
+            document.addEventListener("mouseup", releaseButton);
+            
+
+            
+            
+        </script> 
+    </body>
+</html>
