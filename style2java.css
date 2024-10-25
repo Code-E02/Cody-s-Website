@@ -1,0 +1,8 @@
+html, body {
+  display: flex;
+  justify-contentL:center;
+ 
+}
+canvas {
+  display: block;
+}
